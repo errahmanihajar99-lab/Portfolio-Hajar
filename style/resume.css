@@ -1,0 +1,254 @@
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5ebe1;
+    color: #2c3e35;
+}
+
+body {
+    display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 240px;
+    min-width: 240px; /* Empêche la sidebar de se rétrécir */
+    background-color: #122118;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 10;
+}
+
+.logo h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    color: #e2e8e4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo i {
+    font-size: 1.2rem;
+    color: #a3b899;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a0ac9e;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a i {
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: #233a2d;
+    color: #ffffff;
+}
+
+.sidebar-footer p {
+    font-family: 'Caveat', cursive;
+    color: #8c9e87;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+/* Container principal des options CV */
+.cv-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+}
+
+.cv-option-item {
+    background-color: #dbe5dc; /* Vert pastel aquarelle */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+/* En-tête : Barre cliquable + Bouton télécharger */
+.cv-bar-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+}
+
+/* Bouton principal (Barre) */
+.cv-toggle-btn {
+    flex: 1;
+    background-color: #122118;
+    color: #f5ebe1;
+    border: none;
+    padding: 16px 22px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cv-toggle-btn:hover {
+    background-color: #233a2d;
+}
+
+.cv-toggle-btn span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Flèche d'ouverture */
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.cv-option-item.open .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Bouton Télécharger à côté */
+.cv-download-btn {
+    background-color: #233a2d;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.cv-download-btn:hover {
+    background-color: #122118;
+    transform: translateY(-2px);
+}
+
+/* Zone d'affichage de l'aperçu */
+.cv-preview-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    padding: 0 15px;
+}
+
+.cv-preview-content.active {
+    max-height: 550px;
+    padding: 15px;
+}
+
+.preview-box {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+}
+
+.preview-box iframe {
+    border: none;
+    display: block;
+}
+
+.main-content {
+    margin-left: 240px;
+    width: calc(100vw - 240px);
+    padding: 40px 60px;
+    min-height: 100vh;
+}
+.page-header h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 3.5rem;
+    color: #1d2e25;
+    margin-bottom: 25px;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    color: #2c3e35;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1050px;
+}
+
+/* ================= BOUTON PAGE SUIVANTE ================= */
+.next-page-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #122118; /* Couleur sombre assortie à la sidebar */
+    color: #f5ebe1;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.next-page-btn i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol */
+.next-page-btn:hover {
+    background-color: #233a2d;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.next-page-btn:hover i {
+    transform: translateX(4px); /* Petit mouvement de la flèche vers la droite */
+}

@@ -1,0 +1,381 @@
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5ebe1;
+    color: #2c3e35;
+}
+
+body {
+    display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    background-color: #122118;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+}
+
+.logo h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    color: #e2e8e4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo i {
+    font-size: 1.2rem;
+    color: #a3b899;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a0ac9e;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: #233a2d;
+    color: #ffffff;
+}
+
+.sidebar-footer p {
+    font-family: 'Caveat', cursive;
+    color: #8c9e87;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+/* ================= CONTENU PRINCIPAL ================= */
+.main-content {
+    margin-left: 240px;
+    width: calc(100vw - 240px);
+    padding: 40px 60px;
+    min-height: 100vh;
+}
+
+.page-header h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 3.5rem;
+    color: #1d2e25;
+    margin-bottom: 25px;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    color: #2c3e35;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1050px;
+}
+
+/* ================= 1. INTRO : PHOTO À CÔTÉ DU TEXTE ================= */
+.intro-section {
+    display: grid;
+    grid-template-columns: 320px 1fr; /* Image fixée à 320px, le texte prend le reste */
+    gap: 40px;
+    align-items: center;
+}
+
+.image-wrapper {
+    width: 100%;
+    border-radius: 30px 10px 40px 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(44, 62, 53, 0.15);
+    background-color: #e5d3c3;
+}
+
+.profile-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+.intro-card h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.8rem;
+    color: #1d2e25;
+    margin-bottom: 15px;
+}
+
+.intro-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #3b4e43;
+    margin-bottom: 12px;
+}
+
+.quote-text {
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* ================= 2. SKILLS : 2 CARTES CÔTÉ À CÔTÉ ================= */
+.skills-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 30px;
+}
+
+.skills-card {
+    background-color: #dbe5dc; /* Vert pastel aquarelle */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.skills-card h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    color: #1d2e25;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.soft-skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.soft-skills li {
+    font-size: 1rem;
+    color: #2c3e35;
+    position: relative;
+    padding-left: 18px;
+}
+
+.soft-skills li::before {
+    content: "•";
+    color: #1d2e25;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.hard-skills details {
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.hard-skills summary {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #1d2e25;
+}
+
+.details-content {
+    margin-top: 8px;
+    padding-left: 10px;
+}
+
+.details-content p {
+    font-size: 0.9rem;
+    color: #4a5d51;
+    margin-bottom: 4px;
+}
+
+/* ================= SECTION PARADIGME HORIZONTALE ================= */
+
+.paradigm-section {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.paradigm-title {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: #1d2e25;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.paradigm-title i {
+    font-size: 1.4rem;
+}
+
+/* Conteneur principal de la frise */
+.paradigm-timeline {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+/* Ligne continue d'arrière-plan */
+.timeline-line {
+    position: absolute;
+    top: 68px; /* Alignée au niveau des numéros */
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background-color: #a3b899;
+    z-index: 1;
+}
+
+/* Dispositions des 6 étapes côte à côte */
+.paradigm-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+    gap: 15px;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 150px;
+}
+
+/* Icônes dessinées au-dessus */
+.step-icon {
+    font-size: 1.8rem;
+    color: #2c3e35;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+/* Cercles numérotés sombres */
+.step-number {
+    width: 24px;
+    height: 24px;
+    background-color: #122118;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    box-shadow: 0 0 0 4px #f5ebe1; /* Masque la ligne sous le cercle */
+}
+
+/* Texte manuscrit / calligraphié sous les numéros */
+.step-text {
+    font-family: 'Caveat', cursive;
+    font-size: 1.15rem;
+    color: #2c3e35;
+    line-height: 1.2;
+}
+
+/* ================= BOUTON PAGE SUIVANTE ================= */
+.next-page-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #122118; /* Couleur sombre assortie à la sidebar */
+    color: #f5ebe1;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.next-page-btn i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol */
+.next-page-btn:hover {
+    background-color: #233a2d;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.next-page-btn:hover i {
+    transform: translateX(4px); /* Petit mouvement de la flèche vers la droite */
+}
+
+/* 1. Modifie ou complète la classe .step-item existante */
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 150px;
+    
+    /* Animation fluide lors du survol */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer; /* Change le curseur en main au survol */
+}
+
+/* 2. Ajoute l'effet de zoom au survol */
+.step-item:hover {
+    transform: scale(1.15) translateY(-5px); /* Zoom de 15% et léger décalage vers le haut */
+}
+
+/* 3. Optionnel : Accentuer l'icône lors du survol */
+.step-item:hover .step-icon {
+    color: #122118; /* Assombrit légèrement l'icône pour marquer le survol */
+    transition: color 0.3s ease;
+}
+
+.step-item:hover .step-number {
+    background-color: #233a2d; /* Anime la couleur du cercle numéroté */
+    transition: background-color 0.3s ease;
+}

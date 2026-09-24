@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajar Errahmani - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/resume.css">
+</head>
+<body>
+    <!-- Barre de navigation latérale -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>H <i class="fa-solid fa-code"></i></h2>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="about.html"><i class="fa-regular fa-user"></i> About Me</a>
+            <a href="resume.html" class="active"><i class="fa-regular fa-file-lines"></i> Resume</a>
+            <a href="certificates.html"><i class="fa-solid fa-award"></i> Certificates</a>
+            <a href="projects.html"><i class="fa-solid fa-code"></i> Projects</a>
+            <a href="contacts.html"><i class="fa-regular fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <i class="fa-solid fa-code"></i>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Resume <span class="heart-icon">♡</span></h1>
+        </header>
+
+    <div class="cv-options-container">
+
+        <!-- 1. CV Standard / Normal -->
+        <div class="cv-option-item">
+            <div class="cv-bar-header">
+                <button class="cv-toggle-btn" onclick="toggleCV('cv-normal')">
+                    <span><i class="fa-regular fa-file-lines"></i> Standard CV</span>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </button>
+                <a href="../cv/regular-cv.pdf" download class="cv-download-btn" title="Télécharger CV Normal">
+                    <i class="fa-solid fa-download"></i> Download
+                </a>
+            </div>
+            <div id="cv-normal" class="cv-preview-content">
+                <div class="preview-box">
+                    <iframe src="../cv/regular-cv.pdf" width="100%" height="500px"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. CV Europass -->
+        <div class="cv-option-item">
+            <div class="cv-bar-header">
+                <button class="cv-toggle-btn" onclick="toggleCV('cv-europass')">
+                    <span><i class="fa-solid fa-globe"></i> Europass CV</span>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </button>
+                <a href="../cv/europass-cv.pdf" download class="cv-download-btn" title="Télécharger CV Europass">
+                    <i class="fa-solid fa-download"></i> Download
+                </a>
+            </div>
+            <div id="cv-europass" class="cv-preview-content">
+                <div class="preview-box">
+                    <iframe src="../cv/europass-cv.pdf" width="100%" height="500px"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. CV Créatif -->
+        <div class="cv-option-item">
+            <div class="cv-bar-header">
+                <button class="cv-toggle-btn" onclick="toggleCV('cv-creative')">
+                    <span><i class="fa-solid fa-palette"></i> Creative CV</span>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </button>
+                <a href="../cv/creative-cv.pdf" download class="cv-download-btn" title="Télécharger CV Créatif">
+                    <i class="fa-solid fa-download"></i> Download
+                </a>
+            </div>
+            <div id="cv-creative" class="cv-preview-content">
+                <div class="preview-box">
+                    <iframe src="../cv/creative-cv.pdf" width="100%" height="500px"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bouton Page Suivante (Flèche en bas à droite) -->
+        <a href="certificates.html" class="next-page-btn" title="Next page: Certifications">
+            <span>Next</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+</main>
+
+<!-- Petit script JavaScript pour ouvrir/fermer l'aperçu -->
+<script src="../script/script.js"></script>
+</body>
+</html>
