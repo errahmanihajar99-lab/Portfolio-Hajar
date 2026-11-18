@@ -379,3 +379,28 @@ body {
     background-color: #233a2d; /* Anime la couleur du cercle numéroté */
     transition: background-color 0.3s ease;
 }
+
+.hobbies-section {
+    padding-bottom: 60px;
+}
+
+.hobbies-section h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    color: #1d2e25;
+    margin-bottom: 20px;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 20px;
+}
+
+.hobbies-grid .skills-card h3 {
+    margin-bottom: 10px;
+}
+
+.hobbies-grid p {
+    line-height: 1.6;
+}
